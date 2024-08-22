@@ -13,6 +13,7 @@
                 data[key] = value;
             });
             
+            
             // Muestra los datos en la consola (puedes mostrarlo en el DOM si prefieres)
             console.log('Datos del formulario:', data);
             
