@@ -1,0 +1,17 @@
+
+
+Me presento como estudiante de desarrollo web, con una sólida formación en las herramientas básicas de programación y bases de datos. Estoy buscando oportunidades para aplicar mis conocimientos en un entorno laboral, con el objetivo de crecer profesionalmente y contribuir de manera significativa a proyectos reales.
+
+He estudiado una variedad de temas en bases de datos, comenzando con una introducción general que me permitió comprender su importancia en la gestión de información. Aprendí a diseñar modelos entidad-relación (ERD) para estructurar la lógica de bases de datos de manera clara y efectiva. Posteriormente, me adentré en el modelo relacional, esencial para traducir estos modelos en tablas y relaciones dentro de una base de datos.
+
+Mi habilidad en SQL incluye la escritura de consultas simples y complejas. Empecé con consultas básicas como SELECT, INSERT, UPDATE y DELETE, y luego avancé a consultas más sofisticadas que utilizan joins, subconsultas y funciones agregadas. También aprendí a crear y gestionar bases de datos y tablas, definiendo claves primarias y foráneas, y aplicando principios de normalización para diseñar bases de datos eficientes.
+
+En cuanto a la programación orientada a objetos, he aplicado estos conceptos utilizando PHP. He trabajado con clases, métodos y objetos, y comprendo la importancia de la encapsulación, herencia y polimorfismo. Estas habilidades me permiten desarrollar aplicaciones modulares y mantenibles. Además, he integrado la programación orientada a objetos con bases de datos relacionales mediante técnicas de mapeo objeto-relacional, facilitando el manejo de datos en mis aplicaciones.
+
+Mis conocimientos en programación estática abarcan HTML, CSS y JavaScript. En HTML, he creado páginas web bien estructuradas utilizando una variedad de elementos. Con CSS, he aplicado estilos para mejorar la apariencia y usabilidad de las páginas web, empleando técnicas avanzadas como posicionamiento y manejo de capas. En JavaScript, he desarrollado la capacidad de añadir interactividad, manejando variables, operadores, estructuras de control, funciones y eventos, y manipulando el DOM para crear experiencias de usuario dinámicas.
+
+Hasta ahora, he aplicado estos conocimientos en la creación de un sitio web estático y básico. Este proyecto me permitió practicar la estructura y el diseño web utilizando HTML y CSS, así como añadir elementos interactivos simples con JavaScript. Aunque fue un proyecto inicial, me proporcionó una base sólida y una comprensión práctica de cómo construir y estilizar páginas web.
+
+Además de mis habilidades técnicas, soy una persona extrovertida, dinámica y con una visión constante hacia el progreso y el avance. No me gusta quedarme sin hacer nada y siempre busco mantenerme activo, pero también sé cómo manejar el estrés y mantener un equilibrio. Me apasiona ver los resultados de mi trabajo y comprobar que mis esfuerzos son útiles y valiosos.
+
+Mi objetivo es aplicar estos conocimientos y características personales en un entorno laboral donde pueda seguir aprendiendo y mejorando mis competencias técnicas. Estoy motivado para contribuir a proyectos reales, aprender de profesionales experimentados y recibir feedback que me permita mejorar continuamente. Creo firmemente en el aprendizaje práctico y estoy dispuesto a enfrentar nuevos desafíos que me permitan crecer profesional y personalmente.
