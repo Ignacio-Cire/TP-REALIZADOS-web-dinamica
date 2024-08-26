@@ -1,27 +1,29 @@
-
-$(document).ready(function () { 
-    // Cuando el documento esté listo (cargado completamente), se ejecuta esta función.
-
+$(document).ready(function () {
     $('#submitBtn').on('click', function (event) {
-        event.preventDefault();  // Previene que el botón recargue la página al hacer clic.
+        event.preventDefault();  // Previene el comportamiento por defecto del enlace
 
-        const usuario = $('#usuario').val();  // Obtenemos el valor del campo de usuario
-        const clave = $('#clave').val();      // Obtenemos el valor del campo de clave
+        const usuario = $('#usuario').val();
+        const clave = $('#clave').val();
 
-        // Realizamos una solicitud AJAX para enviar los datos al script verificaPass.php
         $.ajax({
-            url: '/TP%20REALIZADOS-web-dinamica/TP2/login/control/verificaPass.php',  // Especificamos el archivo al que se enviarán los datos
-            type: 'POST',             // Indicamos que la solicitud será de tipo POST
-            data: { usuario: usuario, clave: clave },  // Enviamos los datos del usuario y clave
-            dataType: 'json',  // Esperamos una respuesta en formato JSON
-            
-            // Si la solicitud es exitosa, esta función se ejecuta
-
+            url: 'http://localhost:3000/TPS-dinamica/tp2/ejercicio3/login/a/control/verificaPass.php',  // Asegúrate de que esta ruta sea correcta
+            type: 'POST',
+            data: { usuario: usuario, clave: clave },
+            dataType: 'json',
             success: function (response) {
                 if (response.status === 'success') {
-                    alert(response.message);  // Si las credenciales son correctas, mostramos el mensaje de bienvenida
-                    // Puedes redirigir al usuario a otra página si es necesario
+                    Swal.fire('Éxito', response.message, 'success');  // Usando SweetAlert para mostrar el mensaje
+                } else {
+                    Swal.fire('Error', response.message, 'error');
                 }
+            },
+            error: function () {
+                if (usuario === '' || clave === '') {
+                    Swal.fire('Incompleto', 'Por favor, complete todos los campos.', 'error');
+                    return;
+                    
+                }
+                Swal.fire('Error', 'No se pudo realizar la solicitud.', 'error');
             }
         });
     });
