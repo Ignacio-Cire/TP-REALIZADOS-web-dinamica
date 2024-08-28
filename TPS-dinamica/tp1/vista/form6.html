@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Vista/assets/style6.css">
+    <title>Formulario de Estudios, Sexo y Deportes</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Ingrese sus datos</h2>
+        <form action="../Vista/action/action6-estudios.php" method="POST">
+            <label for="sexo">Sexo:</label><br>
+            <input type="radio" id="sexo_m" name="sexo" value="Masculino" required>
+            <label for="sexo_m">Masculino</label><br>
+            <input type="radio" id="sexo_f" name="sexo" value="Femenino">
+            <label for="sexo_f">Femenino</label><br>
+            <input type="radio" id="sexo_o" name="sexo" value="Otro">
+            <label for="sexo_o">Otro</label><br><br>
+
+            <label for="estudios">Nivel de Estudios:</label><br>
+            <input type="radio" id="estudios_1" name="estudios" value="No tiene estudios" required>
+            <label for="estudios_1">No tiene estudios.</label><br>
+            <input type="radio" id="estudios_2" name="estudios" value="Estudios primarios">
+            <label for="estudios_2">Estudios primarios</label><br>
+            <input type="radio" id="estudios_3" name="estudios" value="Estudios secundarios">
+            <label for="estudios_3">Estudios secundarios</label><br><br>
+
+            <label for="deportes">Seleccione los deportes que practica:</label><br>
+            <input type="checkbox" id="futbol" name="deportes[]" value="Futbol">
+            <label for="futbol">Futbol</label><br>
+            <input type="checkbox" id="basket" name="deportes[]" value="Basket">
+            <label for="basket">Basket</label><br>
+            <input type="checkbox" id="tennis" name="deportes[]" value="Tennis">
+            <label for="tennis">Tennis</label><br>
+            <input type="checkbox" id="voley" name="deportes[]" value="Voley">
+            <label for="voley">Voley</label><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

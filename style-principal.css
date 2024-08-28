@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Cobertura completa de la ventana */
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    background-color: #241e1e; /* Color de fondo oscuro */
+}
+
+
+
+.menu-container {
+    background-color: #000; /* Fondo negro */
+    padding: 25px; /* Espaciado */
+    border-radius: 12px; /* Bordes redondeados */
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Efecto de transición */
+}
+
+.menu-container:hover {
+    transform: scale(1.02); /* Escala al pasar el ratón */
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 1.8rem; /* Tamaño de fuente */
+    color: #64e211; /* Color de texto más claro */
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px 0; /* Espacio interno */
+    border: none; /* Sin bordes */
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color:  #64e211; /* Fondo oscuro */
+    color: #000;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.btn:hover {
+    background-color: #7fe757; /*hover claro*/
+}
+
+.link-list {
+    display: none;
+    margin-top: 12px;
+    text-align: left;
+}
+
+.link-list a {
+    display: block;
+    margin-bottom: 8px; /* Espacio entre enlaces */
+    color: #7fe757; /* Color de texto claro */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+.link-list a:hover {
+    color: #ff3f83; /* Color de hover rosa */
+}
+
+#tp2Links .btn-primary {
+    background-color: #ff3f83; /* Fondo rosa */
+    border-color: transparent; /* Sin borde */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#tp2Links .btn-primary:hover {
+    background-color: #e36767; /* Hover rosa más oscuro */
+}
+
+#colorback {
+    background-color: #333333; /* Fondo gris oscuro */
+}
