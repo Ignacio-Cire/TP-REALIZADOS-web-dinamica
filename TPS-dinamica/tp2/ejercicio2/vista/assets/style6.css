@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fondo negro */
+    color: #adff2f; /* Color de texto verde claro */
+}
+
+.form-container {
+    width: 25%;
+    height: 40%; /* Ajusta la altura según sea necesario */
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #111; /* Fondo del contenedor, ligeramente más claro que el fondo */
+    color: #adff2f; /* Color de texto verde claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 10%;
+}
+
+.errores{
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color:#fff;
+    background-color: rgb(225, 0, 0);
+    font-size: 14px;
+    margin-top: -100px;
+    margin-left: 280px;
+    padding: 10px;
+    position: absolute;
+}
+
+h2, h1 {
+    text-align: center;
+    color: #adff2f; /* Color de texto verde claro */
+    margin-bottom: 20px;
+}
+
+label {
+    color: #adff2f; /* Color de texto verde claro */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #adff2f; /* Color de fondo del botón */
+    color: #000; /* Color de texto del botón */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #8cff00; /* Color de fondo del botón al pasar el cursor */
+}

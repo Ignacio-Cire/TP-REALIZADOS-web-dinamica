@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Vista/assets/style6.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <title>Formulario de Estudios, Sexo y Deportes</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Ingrese sus datos</h2>
+        <form id="formulario" action="../vista/action/action6-estudios.php" method="POST">
+            <label for="sexo">Sexo:</label><br>
+            <input type="radio" class="sexo" id="sexo_masculino" name="sexo" value="Masculino">
+            <label for="sexo_masculino">Masculino</label><br>
+            <input type="radio" class="sexo" id="sexo_femenino" name="sexo" value="Femenino">
+            <label for="sexo_femenino">Femenino</label><br>
+            <input type="radio" class="sexo" id="sexo_otro" name="sexo" value="Otro">
+            <label for="sexo_otro">Otro</label><br><br>
+
+            <div id="mensaje_sexo" class="errores">Debe elegir una opción.</div>
+
+            <label for="estudios">Nivel de Estudios:</label><br>
+            <input type="radio" class="estudios" id="estudios_no_tiene" name="estudios" value="No tiene estudios">
+            <label for="estudios_no_tiene">No tiene estudios</label><br>
+            <input type="radio" class="estudios" id="estudios_primarios" name="estudios" value="Estudios primarios">
+            <label for="estudios_primarios">Estudios primarios</label><br>
+            <input type="radio" class="estudios" id="estudios_secundarios" name="estudios" value="Estudios secundarios">
+            <label for="estudios_secundarios">Estudios secundarios</label><br><br>
+
+            <div id="mensaje_estudios" class="errores">Debe elegir una opción.</div>
+
+            <label for="deportes">Seleccione los deportes que practica:</label><br>
+            <input type="checkbox" id="futbol" name="deportes[]" value="Futbol">
+            <label for="futbol">Futbol</label><br>
+            <input type="checkbox" id="basket" name="deportes[]" value="Basket">
+            <label for="basket">Basket</label><br>
+            <input type="checkbox" id="tennis" name="deportes[]" value="Tennis">
+            <label for="tennis">Tennis</label><br>
+            <input type="checkbox" id="voley" name="deportes[]" value="Voley">
+            <label for="voley">Voley</label><br><br>
+
+            <div id="mensaje_deporte" class="errores">Debe elegir al menos una opción.</div>
+
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#formulario").submit(function(event) {
+                var radio1 = $(".sexo:checked").length;
+                var radio2 = $(".estudios:checked").length;
+                var deportes = $("input[type='checkbox']:checked").length;
+
+                var valid = true;
+
+                if (radio1 === 0) {
+                    $("#mensaje_sexo").fadeIn();
+                    valid = false;
+                } else {
+                    $("#mensaje_sexo").fadeOut();
+                }
+
+                if (radio2 === 0) {
+                    $("#mensaje_estudios").fadeIn();
+                    valid = false;
+                } else {
+                    $("#mensaje_estudios").fadeOut();
+                }
+
+                if (deportes === 0) {
+                    $("#mensaje_deporte").fadeIn();
+                    valid = false;
+                } else {
+                    $("#mensaje_deporte").fadeOut();
+                }
+
+                if (!valid) {
+                    event.preventDefault(); 
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

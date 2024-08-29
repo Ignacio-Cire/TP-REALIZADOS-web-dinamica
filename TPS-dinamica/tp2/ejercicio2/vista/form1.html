@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vista/assets/style1.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <title>form1</title>
+</head>
+<body>
+    <h1>Ingrese un número</h1>
+    <form action="action/action1-numero.php" method="POST">
+        <label for="numero">Número:</label>
+        <input type="number" id="numero" name="numero">
+        <div id="mensaje1" class="errores">Ingrese un número válido</div>
+        <button type="submit" id="enviar" >Enviar</button>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#enviar").click(function(){
+                var numero = $("#numero").val();
+
+                if(numero == ""){
+                    $("#mensaje1").fadeIn();
+                    event.preventDefault();
+                }else{
+                    $("#mensaje1").fadeOut();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

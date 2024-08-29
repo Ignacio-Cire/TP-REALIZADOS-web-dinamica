@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../vista/assets/style7.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <title>Formulario de Operaciones Matemáticas</title>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Ingrese los números y seleccione una operación</h2>
+        <form action="../vista/action/action7-operacion.php" method="POST">
+            <label for="numero1">Número 1:</label>
+            <input type="text" id="numero1" name="numero1" pattern="\d+"><br><br>
+            <div id="mensaje1" class="errores">Ingrese el número 1.</div>
+
+            <label for="numero2">Número 2:</label>
+            <input type="text" id="numero2" name="numero2" pattern="\d+"><br><br>
+            <div id="mensaje2" class="errores">Ingrese el número 2.</div>
+
+            <label for="operacion">Operación:</label>
+            <select id="operacion" name="operacion">
+                <option value="suma">Suma</option>
+                <option value="resta">Resta</option>
+                <option value="multiplicacion">Multiplicación</option>
+                <option value="division">División</option>
+            </select><br><br>
+
+            <button type="submit" id="enviar">Calcular</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#enviar").click(function(){
+                var numero1 = $("#numero1").val();
+                var numero2 = $("#numero2").val();
+
+                if(numero1 == ""){
+                    $("#mensaje1").fadeIn();
+                    event.preventDefault();
+                }else{
+                    $("#mensaje1").fadeOut();
+                    if(numero2 == ""){
+                       $("#mensaje2").fadeIn();
+                       event.preventDefault();
+                }else{
+                    $("#mensaje2").fadeOut();
+                }
+               }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

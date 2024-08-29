@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 75%;
+    max-width: 600px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.errores{
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color:#fff;
+    background-color: rgb(225, 0, 0);
+    font-size: 14px;
+    margin-top: -40px;
+    margin-left: 300px;
+    padding: 10px;
+    position: absolute;
+}
+
+h1 {
+    color: #ffa600;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+label {
+    color: #ffa500;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    font-size: 1em;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #ffa500;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+
+/*BOTON VOLVER A LA PRINCIPAL*/
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6600; /* Color naranja */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #e65c00; /* Color naranja oscuro */
+}

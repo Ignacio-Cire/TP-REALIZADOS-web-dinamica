@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario POST</title>
+    <link rel="stylesheet" href="../vista/assets/style3.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Información Personal</h1>
+        <form action="../vista/action/action3-datos.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <div id="mensaje1" class="errores">Ingrese su nombre.</div>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+            <div id="mensaje2" class="errores">Ingrese su apellido.</div>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0">
+            <div id="mensaje3" class="errores">Ingrese su edad.</div>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+            <div id="mensaje4" class="errores">Ingrese su dirección.</div>
+
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#enviar").click(function(){
+                var nombre = $("#nombre").val();
+                var apellido = $("#apellido").val();
+                var edad = $("#edad").val();
+                var direccion = $("#direccion").val();
+
+                var contieneNumerosNombre = /\d/.test(nombre);
+                var contieneNumerosApellido = /\d/.test(nombre);
+
+                if(nombre == ""){
+                $("#mensaje1").fadeIn();
+                event.preventDefault();
+                }else if(contieneNumerosNombre){
+                    $("#mensaje1").fadeIn();
+                    event.preventDefault();
+                }else{
+                     $("#mensaje1").fadeOut();
+                     if(apellido == ""){
+                       $("#mensaje2").fadeIn();
+                       event.preventDefault();
+                       }else if(contieneNumerosApellido){
+                            $("#mensaje2").fadeIn();
+                            event.preventDefault();
+                    }else{
+                        $("#mensaje2").fadeOut();
+                           if(edad == ""){
+                             $("#mensaje3").fadeIn();
+                             event.preventDefault();
+                       }else{
+                            $("#mensaje3").fadeOut();
+                               if(direccion == ""){
+                                $("#mensaje4").fadeIn();
+                                event.preventDefault();
+                            }else{
+                                $("#mensaje4").fadeOut();
+                            }
+                        }
+                }
+            }
+        });
+    });
+
+    </script>
+
+</body>
+</html>

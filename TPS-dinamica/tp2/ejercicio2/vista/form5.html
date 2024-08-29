@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../vista/assets/style5.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <title>Formulario de Estudios y Sexo</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Ingrese sus datos</h2>
+        <form id="formulario" action="../vista/action/action5-formulario.php" method="POST">
+            <label for="sexo">Sexo:</label><br>
+            <input type="radio" class="sexo" id="sexo_masculino" name="sexo" value="Masculino">
+            <label for="sexo_masculino">Masculino</label><br>
+            <input type="radio" class="sexo" id="sexo_femenino" name="sexo" value="Femenino">
+            <label for="sexo_femenino">Femenino</label><br>
+            <input type="radio" class="sexo" id="sexo_otro" name="sexo" value="Otro">
+            <label for="sexo_otro">Otro</label><br><br>
+
+            <div id="mensaje_sexo" class="errores">Debe elegir una opción.</div>
+
+            <label for="estudios">Nivel de Estudios:</label><br>
+            <input type="radio" class="estudios" id="estudios_no_tiene" name="estudios" value="No tiene estudios">
+            <label for="estudios_no_tiene">No tiene estudios</label><br>
+            <input type="radio" class="estudios" id="estudios_primarios" name="estudios" value="Estudios primarios">
+            <label for="estudios_primarios">Estudios primarios</label><br>
+            <input type="radio" class="estudios" id="estudios_secundarios" name="estudios" value="Estudios secundarios">
+            <label for="estudios_secundarios">Estudios secundarios</label><br><br>
+
+            <div id="mensaje_estudios" class="errores">Debe elegir una opción.</div>
+
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#formulario").submit(function(event){
+                var radio1 = $(".sexo:checked").length;
+                var radio2 = $(".estudios:checked").length;
+
+                if (radio1 === 0) {
+                    $("#mensaje_sexo").fadeIn();
+                    event.preventDefault(); 
+                } else {
+                    $("#mensaje_sexo").fadeOut();
+                }
+
+                if (radio2 === 0) {
+                    $("#mensaje_estudios").fadeIn();
+                    event.preventDefault();
+                } else {
+                    $("#mensaje_estudios").fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+

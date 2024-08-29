@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $fileType = $_FILES['miArchivo']['type'];
         
         if (in_array($fileType, $validTypes)) {
-            // Validamos el tamaño del archivo (máximo 2MB)
+            // Validamos el tamaño del   archivo (máximo 2MB)
             $maxSize = 2 * 1024 * 1024; // 2MB en bytes
             if ($_FILES['miArchivo']['size'] <= $maxSize) {
                 if (!is_dir($dir)) {

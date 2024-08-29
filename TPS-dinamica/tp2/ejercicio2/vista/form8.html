@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Entradas de Cine</title>
+    <link rel="stylesheet" href="../vista/assets/style8.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Calcula el valor de tu entrada</h2>
+        <form action="../vista/action/action8-entrada.php" method="POST">
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" required pattern="\d+"><br><br>
+
+            <div id="mensaje1" class="errores">Ingrese una edad.</div>
+
+            <label for="estudiante">¿Eres estudiante?</label>
+            <input type="radio" id="estudiante_si" name="estudiante" value="si" required>
+            <label for="estudiante_si">Sí</label>
+            <input type="radio" id="estudiante_no" name="estudiante" value="no">
+            <label for="estudiante_no">No</label><br><br>
+
+            <div id="mensaje2" class="errores">Debe elegir una opción.</div>
+
+            <button type="submit" id="enviar">Calcular</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#enviar").click(function(){
+                var edad = $("#edad").val();
+                var estudia = $("input[type='radio']:checked").length;
+
+                if(edad == ""){
+                    $("#mensaje1").fadeIn();
+                    event.preventDefault(); 
+                }else{
+                    $("#mensaje1").fadeOut();
+                    if (estudia === 0) {
+                       $("#mensaje2").fadeIn();
+                       event.preventDefault(); 
+                    } else {
+                            $("#mensaje2").fadeOut();
+                }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
