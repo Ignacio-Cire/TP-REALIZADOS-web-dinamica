@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Calculadora de Entradas de Cine</title>
     <link rel="stylesheet" href="../vista/assets/style8.css">
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/form8.js"></script>
 </head>
 <body>
     <div class="form-container">
@@ -27,29 +28,7 @@
             <button type="reset">Limpiar</button>
         </form>
     </div>
-    <a href="../../../../menu-principal.html" class="btn">Volver al incio</a>
 
-    <script>
-        $(document).ready(function(){
-            $("#enviar").click(function(){
-                var edad = $("#edad").val();
-                var estudia = $("input[type='radio']:checked").length;
-
-                if(edad == ""){
-                    $("#mensaje1").fadeIn();
-                    event.preventDefault(); 
-                }else{
-                    $("#mensaje1").fadeOut();
-                    if (estudia === 0) {
-                       $("#mensaje2").fadeIn();
-                       event.preventDefault(); 
-                    } else {
-                            $("#mensaje2").fadeOut();
-                }
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>

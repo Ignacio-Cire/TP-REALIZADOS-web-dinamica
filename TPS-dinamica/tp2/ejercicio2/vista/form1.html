@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vista/assets/style1.css">
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/form1.js"></script>
     <title>form1</title>
 </head>
 <body>
@@ -16,23 +17,6 @@
         <div id="mensaje1" class="errores">Ingrese un número válido</div>
         <button type="submit" id="enviar" >Enviar</button>
     </form>
-
-    <a href="../../../../menu-principal.html" class="btn">Volver al incio</a>
-
-    <script>
-        $(document).ready(function(){
-            $("#enviar").click(function(){
-                var numero = $("#numero").val();
-
-                if(numero == ""){
-                    $("#mensaje1").fadeIn();
-                    event.preventDefault();
-                }else{
-                    $("#mensaje1").fadeOut();
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>

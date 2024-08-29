@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario POST</title>
     <link rel="stylesheet" href="../vista/assets/style3.css">
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/form3.js"></script>
 </head>
 <body>
     <div class="container">
@@ -30,53 +31,7 @@
             <button type="submit" id="enviar">Enviar</button>
         </form>
     </div>
-    <a href="../../../../menu-principal.html" class="btn">Volver al incio</a>
 
-    <script>
-        $(document).ready(function(){
-            $("#enviar").click(function(){
-                var nombre = $("#nombre").val();
-                var apellido = $("#apellido").val();
-                var edad = $("#edad").val();
-                var direccion = $("#direccion").val();
-
-                var contieneNumerosNombre = /\d/.test(nombre);
-                var contieneNumerosApellido = /\d/.test(nombre);
-
-                if(nombre == ""){
-                $("#mensaje1").fadeIn();
-                event.preventDefault();
-                }else if(contieneNumerosNombre){
-                    $("#mensaje1").fadeIn();
-                    event.preventDefault();
-                }else{
-                     $("#mensaje1").fadeOut();
-                     if(apellido == ""){
-                       $("#mensaje2").fadeIn();
-                       event.preventDefault();
-                       }else if(contieneNumerosApellido){
-                            $("#mensaje2").fadeIn();
-                            event.preventDefault();
-                    }else{
-                        $("#mensaje2").fadeOut();
-                           if(edad == ""){
-                             $("#mensaje3").fadeIn();
-                             event.preventDefault();
-                       }else{
-                            $("#mensaje3").fadeOut();
-                               if(direccion == ""){
-                                $("#mensaje4").fadeIn();
-                                event.preventDefault();
-                            }else{
-                                $("#mensaje4").fadeOut();
-                            }
-                        }
-                }
-            }
-        });
-    });
-
-    </script>
 
 </body>
 </html>

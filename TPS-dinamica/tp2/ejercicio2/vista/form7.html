@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../vista/assets/style7.css">
-    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../vista/function/form7.js"></script>
     <title>Formulario de Operaciones Matemáticas</title>
 </head>
 
@@ -32,29 +33,6 @@
             <button type="submit" id="enviar">Calcular</button>
         </form>
     </div>
-    <a href="../../../../menu-principal.html" class="btn">Volver al incio</a>
-
-    <script>
-        $(document).ready(function(){
-            $("#enviar").click(function(){
-                var numero1 = $("#numero1").val();
-                var numero2 = $("#numero2").val();
-
-                if(numero1 == ""){
-                    $("#mensaje1").fadeIn();
-                    event.preventDefault();
-                }else{
-                    $("#mensaje1").fadeOut();
-                    if(numero2 == ""){
-                       $("#mensaje2").fadeIn();
-                       event.preventDefault();
-                }else{
-                    $("#mensaje2").fadeOut();
-                }
-               }
-            });
-        });
-    </script>
 
 </body>
 
